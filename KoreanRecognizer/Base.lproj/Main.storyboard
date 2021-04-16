@@ -16,29 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G77-02-VLQ" customClass="CanvasView" customModule="KoreanRecognizer" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G77-02-VLQ" customClass="CanvasView" customModule="KoreanRecognizer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="292" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-75-4Mv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-75-4Mv">
                                 <rect key="frame" x="287" y="254" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Recognize"/>
                                 <connections>
                                     <action selector="recognizeLetter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFX-gJ-B4W"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cz3-9H-fjl">
-                                <rect key="frame" x="0.0" y="1" width="375" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cz3-9H-fjl">
+                                <rect key="frame" x="0.0" y="1" width="375" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="0wH-Lg-XpB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shQ-QX-vrl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shQ-QX-vrl">
                                 <rect key="frame" x="16" y="254" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
                                     <action selector="clearCanvas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VEN-Sm-xSv"/>
@@ -47,6 +46,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G77-02-VLQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0An-Ar-N1W"/>
+                            <constraint firstItem="cz3-9H-fjl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="2Du-Ig-FZr"/>
+                            <constraint firstItem="G77-02-VLQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="L7g-mf-AzZ"/>
+                            <constraint firstItem="r6h-75-4Mv" firstAttribute="leading" secondItem="shQ-QX-vrl" secondAttribute="trailing" constant="235" id="QNd-Jl-aKn"/>
+                            <constraint firstItem="G77-02-VLQ" firstAttribute="top" secondItem="r6h-75-4Mv" secondAttribute="bottom" constant="8" symbolic="YES" id="RCZ-nT-yRP"/>
+                            <constraint firstItem="cz3-9H-fjl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sq5-Ld-fWD"/>
+                            <constraint firstItem="shQ-QX-vrl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VaM-Z5-Ut3"/>
+                            <constraint firstItem="r6h-75-4Mv" firstAttribute="top" secondItem="cz3-9H-fjl" secondAttribute="bottom" constant="61" id="dOM-iA-eVE"/>
+                            <constraint firstItem="cz3-9H-fjl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lLx-Cm-QXq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6h-75-4Mv" secondAttribute="trailing" constant="16" id="uU7-T8-rjm"/>
+                            <constraint firstItem="G77-02-VLQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vAO-ih-O2Q"/>
+                            <constraint firstItem="shQ-QX-vrl" firstAttribute="top" secondItem="cz3-9H-fjl" secondAttribute="bottom" constant="61" id="wEp-VC-NSR"/>
+                            <constraint firstItem="G77-02-VLQ" firstAttribute="top" secondItem="shQ-QX-vrl" secondAttribute="bottom" constant="8" symbolic="YES" id="zJj-l7-I6H"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="canvasView" destination="G77-02-VLQ" id="7mP-VS-aXa"/>
@@ -55,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="94"/>
+            <point key="canvasLocation" x="34.399999999999999" y="93.103448275862078"/>
         </scene>
     </scenes>
     <resources>

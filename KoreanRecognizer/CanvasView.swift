@@ -10,11 +10,11 @@ import UIKit
 class CanvasView: UIView {
 
     // Properties for line drawing
-    var lineColor:UIColor!
-    var lineWidth:CGFloat!
-    var path:UIBezierPath!
-    var touchPoint:CGPoint!
-    var startingPoint:CGPoint!
+    var lineColor: UIColor!
+    var lineWidth: CGFloat!
+    var path: UIBezierPath!
+    var touchPoint: CGPoint!
+    var startingPoint: CGPoint!
     
     override func layoutSubviews() {
         self.clipsToBounds = true // no lines should be visible outside of the view

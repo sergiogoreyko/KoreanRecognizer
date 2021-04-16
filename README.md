@@ -3,4 +3,4 @@
 
 ***Example of recognition:***
 
-![Hnet-image](https://user-images.githubusercontent.com/63499146/115033417-199deb80-9ed3-11eb-84d1-8011a267b448.gif)
+![Hnet-image-2](https://user-images.githubusercontent.com/63499146/115034139-d85a0b80-9ed3-11eb-9ae3-88f7cafad061.gif)

@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         // process the ovservations
         let classifications = observations
             .compactMap({$0 as? VNClassificationObservation}) // cast all elements to VNClassificationObservation objects
-            .filter({$0.confidence > 0.5}) // only choose observations with a confidence of more than 80%
+            .filter({$0.confidence > 0.8}) // only choose observations with a confidence of more than 80%
             .map({$0.identifier}) // only choose the identifier string to be placed into the classifications array
         
         DispatchQueue.main.async {
